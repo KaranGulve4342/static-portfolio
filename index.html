@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Karan Gulve - Software Developer Portfolio" />
+    <meta name="author" content="Karan Gulve" />
+    <title>Karan Gulve - Portfolio</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Add custom styles for enhanced UI -->
+    <style>
+        /* Custom gradient backgrounds */
+        .gradient-primary {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+        
+        .gradient-secondary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        /* Enhanced cards */
+        .modern-card {
+            border: none;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .modern-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        /* Skill progress bars */
+        .skill-progress {
+            height: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #e9ecef;
+            margin-top: 8px;
+        }
+        
+        .skill-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+        }
+        
+        /* Enhanced badges */
+        .modern-badge {
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.75rem;
+        }
+        
+        /* Timeline styles */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #fff, 0 0 0 8px #e9ecef;
+        }
+        
+        /* Enhanced sections */
+        .section-enhanced {
+            padding: 100px 0;
+        }
+        
+        /* Animated elements */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in-up.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Contact form enhancements */
+        .modern-form .form-control {
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            padding: 15px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .modern-form .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        
+        /* Achievement icons */
+        .achievement-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #667eea;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Karan Gulve</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#experience">Experience</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#projects">Projects</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#skills">Skills</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead gradient-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <div class="position-relative mb-5">
+                <img class="masthead-avatar rounded-circle border border-4 border-white shadow-lg" src="assets/img/avataaars.svg" alt="Karan Gulve" style="width: 200px; height: 200px; object-fit: cover;" />
+                <div class="position-absolute bottom-0 end-0 bg-success rounded-circle p-2">
+                    <i class="fas fa-check text-white"></i>
+                </div>
+            </div>
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0 fade-in-up">Karan Gulve</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light fade-in-up">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-4 fade-in-up" style="font-size: 1.2rem;">
+                <i class="fas fa-code me-2"></i>Software Developer | 
+                <i class="fas fa-layers me-2"></i>Full Stack Engineer | 
+                <i class="fas fa-brain me-2"></i>AI Enthusiast
+            </p>
+            <!-- CTA Buttons -->
+            <div class="fade-in-up">
+                <a href="#contact" class="btn btn-outline-light btn-lg me-3">
+                    <i class="fas fa-envelope me-2"></i>Get In Touch
+                </a>
+                <a href="https://github.com/KaranGulve4342" class="btn btn-light btn-lg" target="_blank">
+                    <i class="fab fa-github me-2"></i>View Work
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section with enhanced layout-->
+    <section class="page-section section-enhanced" id="about">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 fade-in-up">About</h2>
+            <div class="divider-custom fade-in-up">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-in-up">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-user-graduate fa-2x text-primary me-3"></i>
+                            <h4 class="mb-0">My Journey</h4>
+                        </div>
+                        <p class="lead">I'm a passionate Computer Engineering student at VIIT, Pune, with hands-on experience in full-stack development and AI technologies. I've completed internships at Pluginlive and Apptware, where I've contributed to building scalable applications and optimizing system performance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in-up">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-rocket fa-2x text-primary me-3"></i>
+                            <h4 class="mb-0">What I Do</h4>
+                        </div>
+                        <p class="lead">With expertise in modern web technologies, cloud platforms, and AI integration, I enjoy solving complex problems and building innovative solutions. I'm also an active competitive programmer with 800+ problems solved on LeetCode.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Education Section-->
+            <div class="row mt-5">
+                <div class="col-12 fade-in-up">
+                    <div class="modern-card p-5 text-center gradient-secondary text-white">
+                        <i class="fas fa-graduation-cap fa-3x mb-3"></i>
+                        <h3 class="text-uppercase mb-4">Education</h3>
+                        <h5><strong>BRACT's Vishwakarma Institute of Information Technology, Pune</strong></h5>
+                        <p class="mb-1 fs-5">B.Tech in Computer Engineering</p>
+                        <p class="opacity-75">Nov. 2022 – June 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Experience Section-->
+    <section class="page-section bg-light section-enhanced" id="experience">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 fade-in-up">Experience</h2>
+            <div class="divider-custom fade-in-up">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4 fade-in-up">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary text-white rounded-circle p-3 me-3">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <h5 class="card-title text-primary mb-0">Software Development Engineer Intern</h5>
+                                <h6 class="card-subtitle text-muted">Pluginlive | Remote</h6>
+                            </div>
+                        </div>
+                        <p class="card-text"><small class="text-muted"><i class="fas fa-calendar me-1"></i>Apr. 2025 – July 2025</small></p>
+                        <ul class="card-text">
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Spearheaded development of new modules, including AI-proctored assessment</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Optimized PostgreSQL queries and FastAPI logic, reducing response times by 25%</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Improved platform stability by 40% by resolving 50+ critical production bugs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4 fade-in-up">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-success text-white rounded-circle p-3 me-3">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div>
+                                <h5 class="card-title text-success mb-0">Full Stack Developer Intern</h5>
+                                <h6 class="card-subtitle text-muted">Apptware | Pune, Maharashtra</h6>
+                            </div>
+                        </div>
+                        <p class="card-text"><small class="text-muted"><i class="fas fa-calendar me-1"></i>Feb. 2025 – Mar. 2025</small></p>
+                        <ul class="card-text">
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Key member of foundational team building HRMS from scratch</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Developed performant backend APIs reducing data latency by 30%</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Optimized Docker images for AWS deployment, reducing pipeline time by 25%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Projects Section-->
+    <section class="page-section section-enhanced" id="projects">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 fade-in-up">Projects</h2>
+            <div class="divider-custom fade-in-up">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-project-diagram"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4 fade-in-up">
+                    <div class="modern-card overflow-hidden h-100">
+                        <div class="gradient-primary text-white p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h5 class="card-title mb-0"><i class="fas fa-heartbeat me-2"></i>Healr.AI</h5>
+                                <small class="opacity-75">Sept. 2024</small>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="card-text">Full-stack AI health assistant with symptom-analysis engine. Reduced patient query resolution time by 30% and achieved 99.9% uptime with sub-200ms latency.</p>
+                            <div class="mb-3">
+                                <span class="modern-badge bg-primary text-white me-1 mb-1">Next.js</span>
+                                <span class="modern-badge bg-info text-white me-1 mb-1">GraphQL</span>
+                                <span class="modern-badge bg-success text-white me-1 mb-1">MongoDB</span>
+                                <span class="modern-badge bg-warning text-white me-1 mb-1">Python</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="fas fa-eye me-1"></i>10,000+ daily requests</small>
+                                <small class="text-success"><i class="fas fa-chart-line me-1"></i>99.9% uptime</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4 fade-in-up">
+                    <div class="modern-card overflow-hidden h-100">
+                        <div class="gradient-secondary text-white p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h5 class="card-title mb-0"><i class="fas fa-seedling me-2"></i>KrishiShakti</h5>
+                                <small class="opacity-75">March 2025</small>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="card-text">AI-driven agricultural platform with machine learning models for predictive analytics. Boosted crop yields by 15-20% and supported 40% month-over-month user growth.</p>
+                            <div class="mb-3">
+                                <span class="modern-badge bg-primary text-white me-1 mb-1">Next.js</span>
+                                <span class="modern-badge bg-danger text-white me-1 mb-1">FastAPI</span>
+                                <span class="modern-badge bg-warning text-white me-1 mb-1">AWS</span>
+                                <span class="modern-badge bg-info text-white me-1 mb-1">Docker</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="fas fa-chart-line me-1"></i>40% user growth</small>
+                                <small class="text-success"><i class="fas fa-leaf me-1"></i>15-20% yield boost</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Skills Section-->
+    <section class="page-section bg-light section-enhanced" id="skills">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 fade-in-up">Technical Skills</h2>
+            <div class="divider-custom fade-in-up">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-cogs"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4 fade-in-up">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-code fa-2x text-primary me-3"></i>
+                            <h5 class="text-primary mb-0">Programming & Development</h5>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>JavaScript / Python</span>
+                                <span class="text-muted">Expert</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>React / Next.js</span>
+                                <span class="text-muted">Advanced</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>Node.js / Java</span>
+                                <span class="text-muted">Advanced</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4 fade-in-up">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-cloud fa-2x text-success me-3"></i>
+                            <h5 class="text-success mb-0">Cloud & Databases</h5>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>AWS / Docker</span>
+                                <span class="text-muted">Advanced</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>MongoDB / PostgreSQL</span>
+                                <span class="text-muted">Expert</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>Firebase / MySQL</span>
+                                <span class="text-muted">Intermediate</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Achievements Section-->
+            <div class="row mt-5">
+                <div class="col-12 fade-in-up">
+                    <div class="modern-card p-5">
+                        <h5 class="text-primary text-center mb-5"><i class="fas fa-trophy fa-2x mb-3 d-block"></i>Achievements & Certifications</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="text-secondary mb-3"><i class="fas fa-medal me-2"></i>Competition Wins</h6>
+                                <div class="timeline-item">
+                                    <div class="d-flex align-items-center">
+                                        <i class="achievement-icon fas fa-trophy"></i>
+                                        <span>Winner - Apptware CODECRAFT (Jan. 2025)</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="d-flex align-items-center">
+                                        <i class="achievement-icon fas fa-medal"></i>
+                                        <span>Runner-up - Magnitude 1.0 DYPCOE (Feb. 2025)</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="d-flex align-items-center">
+                                        <i class="achievement-icon fas fa-award"></i>
+                                        <span>Winner - Vishwacon AI (Nov. 2024)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-secondary mb-3"><i class="fas fa-code me-2"></i>Programming Stats</h6>
+                                <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                                    <i class="fab fa-python fa-2x text-warning me-3"></i>
+                                    <div>
+                                        <strong>LeetCode</strong><br>
+                                        <small class="text-muted">800+ problems, 1700+ rating</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                                    <i class="fas fa-code fa-2x text-success me-3"></i>
+                                    <div>
+                                        <strong>GeeksforGeeks</strong><br>
+                                        <small class="text-muted">500+ problems, 4-star rating</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Contact Section-->
+    <section class="page-section section-enhanced" id="contact">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 fade-in-up">Contact Me</h2>
+            <div class="divider-custom fade-in-up">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-envelope"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7 fade-in-up">
+                    <div class="modern-card p-5">
+                        <form id="contactForm" class="modern-form" data-sb-form-api-token="API_TOKEN">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name"><i class="fas fa-user me-2"></i>Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email"><i class="fas fa-envelope me-2"></i>Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone"><i class="fas fa-phone me-2"></i>Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message"><i class="fas fa-comment me-2"></i>Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    Thank you for reaching out!
+                                </div>
+                            </div>
+                            <div class="d-none" id="submitErrorMessage">
+                                <div class="text-center text-danger mb-3">Error sending message!</div>
+                            </div>
+                            <button class="btn btn-primary btn-xl w-100" id="submitButton" type="submit">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">
+                        Pune, Maharashtra
+                        <br />
+                        India
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/KaranGulve4342"
+                        target="_blank"><i class="fab fa-fw fa-github"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://linkedin.com/in/karangulve4342"
+                        target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="mailto:karangulve4342@gmail.com"><i
+                            class="fas fa-fw fa-envelope"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="tel:+919325831799"><i
+                            class="fas fa-fw fa-phone"></i></a>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">Contact Info</h4>
+                    <p class="lead mb-0">
+                        Email: karangulve4342@gmail.com
+                        <br />
+                        Phone: +91-9325831799
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright &copy; Karan Gulve 2025</small></div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- Add animation script -->
+    <script>
+        // Animate elements on scroll
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.fade-in-up');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animate');
+                }
+            });
+        });
+        
+        // Trigger animation on load
+        window.addEventListener('load', () => {
+            const elements = document.querySelectorAll('.fade-in-up');
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('animate');
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+
+</html>
